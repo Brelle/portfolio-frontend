@@ -1,0 +1,90 @@
+.parcours {
+  padding: 100px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.parcours-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+  align-items: start;
+}
+
+.parcours-column-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-corail-deep);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--color-peche);
+}
+
+.parcours-timeline {
+  padding-left: 28px;
+  border-left: 3px solid var(--color-peche);
+}
+
+.parcours-timeline .timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.parcours-timeline .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.parcours-timeline .timeline-dot {
+  position: absolute;
+  left: -36px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-corail-deep);
+  border: 3px solid var(--color-bg-alt);
+  box-shadow: 0 0 0 2px var(--color-corail-deep);
+}
+
+.parcours-timeline .timeline-content {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  transition: var(--transition);
+}
+
+.parcours-timeline .timeline-content:hover {
+  transform: translateX(6px);
+}
+
+.parcours-timeline .timeline-role {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--color-text);
+}
+
+.parcours-timeline .timeline-company {
+  font-size: 13px;
+  color: var(--color-terracotta);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.parcours-timeline .timeline-period {
+  color: #8a8177;
+  font-weight: 400;
+}
+
+.parcours-timeline .timeline-description {
+  font-size: 13px;
+  color: #5c5650;
+}
+
+@media (max-width: 768px) {
+  .parcours-columns {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

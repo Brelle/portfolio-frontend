@@ -1,0 +1,71 @@
+.skills {
+  padding: 100px 0;
+  background-color: var(--color-bg-alt);
+}
+
+.skills-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 32px 0 40px;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 2px solid var(--color-peche);
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-corail);
+}
+
+.filter-btn.active {
+  background-color: var(--color-corail-deep);
+  border-color: var(--color-corail-deep);
+  color: var(--color-white);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 28px 16px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  transition: var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(255,107,91,0.15);
+}
+
+.skill-icon {
+  font-size: 34px;
+  color: var(--color-corail);
+  margin-bottom: 12px;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.skill-level {
+  font-size: 12px;
+  color: #8a8177;
+  font-weight: 500;
+}

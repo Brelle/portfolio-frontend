@@ -1,0 +1,22 @@
+:root {
+  /* Couleurs principales */
+  --color-corail: #FF6B5B;
+  --color-terracotta: #E85D4E;
+  --color-peche: #FFB39B;
+  --color-jaune: #FFC857;
+  --color-corail-deep: #C94434;
+--color-corail-deep-hover: #A83824;
+
+  /* Fond & texte */
+  --color-bg: #FFF8F5;
+  --color-bg-alt: #FFF1E6;
+  --color-text: #2D2A26;
+  --color-white: #FFFFFF;
+
+  /* Typographie */
+  --font-main: 'Poppins', sans-serif;
+
+  /* Espacements */
+  --radius: 12px;
+  --transition: all 0.25s ease;
+}

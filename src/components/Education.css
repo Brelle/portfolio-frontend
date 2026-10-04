@@ -1,0 +1,72 @@
+.education {
+  padding: 100px 0;
+  background-color: var(--color-bg);
+}
+
+.education .timeline {
+  position: relative;
+  margin-top: 48px;
+  padding-left: 32px;
+  border-left: 3px solid var(--color-peche);
+}
+
+.education .timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.education .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.education .timeline-dot {
+  position: absolute;
+  left: -40px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-corail);
+  border: 3px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-corail);
+}
+
+.education .timeline-content {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  transition: var(--transition);
+}
+
+.education .timeline-content:hover {
+  transform: translateX(6px);
+}
+
+.education .timeline-role {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.education .timeline-company {
+  font-size: 14px;
+  color: var(--color-terracotta);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.education .timeline-period {
+  color: #8a8177;
+  font-weight: 400;
+}
+
+.education .timeline-description {
+  font-size: 14px;
+  color: #5c5650;
+}
+
+@media (max-width: 600px) {
+  .education .timeline { padding-left: 24px; }
+  .education .timeline-dot { left: -32px; }
+}
