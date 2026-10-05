@@ -10,7 +10,8 @@ function Contact() {
     sujet: '',
     message: '',
   });
-  const [statut, setStatut] = useState(null); // null | 'succes' | 'erreur'
+  const [statut, setStatut] = useState(null);
+  const [erreurMsg, setErreurMsg] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -19,7 +20,15 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!formData.nom || !formData.email || !formData.message) {
+    const emailValide = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+
+    if (!formData.nom || !formData.email || !formData.sujet || !formData.message) {
+      setErreurMsg('Merci de remplir tous les champs.');
+      setStatut('erreur');
+      return;
+    }
+    if (!emailValide) {
+      setErreurMsg('Merci de saisir une adresse email valide.');
       setStatut('erreur');
       return;
     }
@@ -29,7 +38,10 @@ function Contact() {
         setStatut('succes');
         setFormData({ nom: '', email: '', sujet: '', message: '' });
       })
-      .catch(() => setStatut('erreur'));
+      .catch(() => {
+        setErreurMsg("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+        setStatut('erreur');
+      });
   };
 
   return (
@@ -112,10 +124,10 @@ function Contact() {
           <button type="submit" className="btn btn-primary">Envoyer</button>
 
           {statut === 'succes' && (
-            <p className="form-feedback success">Votre message a bien été envoyé ✓</p>
+            <p className="form-feedback success">Merci pour votre message ! Je vous répondrai dans les meilleurs délais.</p>
           )}
           {statut === 'erreur' && (
-            <p className="form-feedback error">Merci de remplir les champs obligatoires (nom, email, message).</p>
+            <p className="form-feedback error">{erreurMsg}</p>
           )}
         </form>
       </div>
