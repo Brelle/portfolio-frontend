@@ -1,4 +1,5 @@
-const API_URL = 'https://portfolio-backend-production-2c6a.up.railway.app/api';
+const API_URL = 'https://portfolio-backend-laua.onrender.com/api';
+
 
 export async function getSkills() {
   const res = await fetch(`${API_URL}/skills/`);
